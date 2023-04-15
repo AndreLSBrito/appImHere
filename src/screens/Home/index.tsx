@@ -5,7 +5,11 @@ import { Participant } from "../../components/Participant"
 export function Home(){
 
   function handleParticipantAdd(){
-    console.log("cu que entope")
+    console.log(" Criando participante")
+  }
+
+  function handleParticipantRemove(name:string){
+    console.log(`removendo o participante ${name}`)
   }
 
   return(
@@ -33,10 +37,8 @@ export function Home(){
         </TouchableOpacity>
       </View>
       
-      <Participant name="Ana Laura"/>
-      <Participant name="Luísa"/>
-      <Participant name="Janice"/>
-      <Participant name="André"/>
+      <Participant name="Ana Laura" onRemove={() => handleParticipantRemove('andre')}/>
+      
     </View>
     
   )
